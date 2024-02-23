@@ -27,9 +27,10 @@ SECRET_KEY = 'aay0j_9b&ky3a7(8m8il+-1ud(scw12@w5!+5-=gsk6ynzi0ls'
 DEBUG = True
 
 # <HINT> add your cloud host here
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ['https://*.cognitiveclass.ai']
+
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myproject'
 ]
 
 MIDDLEWARE = [

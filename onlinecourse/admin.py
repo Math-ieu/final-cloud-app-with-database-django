@@ -4,19 +4,15 @@ from .models import Course, Lesson, Instructor, Learner
 
 # <HINT> Register QuestionInline and ChoiceInline classes here
 
-
 class LessonInline(admin.StackedInline):
     model = Lesson
     extra = 5
-
-
 # Register your models here.
 class CourseAdmin(admin.ModelAdmin):
     inlines = [LessonInline]
     list_display = ('name', 'pub_date')
     list_filter = ['pub_date']
     search_fields = ['name', 'description']
-
 
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['title']
